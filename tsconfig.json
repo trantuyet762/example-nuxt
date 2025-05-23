@@ -1,0 +1,7 @@
+
+{
+  "extends": "./.nuxt/tsconfig.json", // <- File này là cho phía client/general
+  "compilerOptions": {
+    // Your custom compiler options (optional)
+  }
+}
