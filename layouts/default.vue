@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import Navbar from '~/components/layout/navbar.vue'
+import Header from "~/components/layout/Header.vue";
+import Footer from "~/components/layout/Footer.vue";
 </script>
 
 <template>
   <div>
-    <Navbar />
+    <Header />
     <slot />
+    <Footer />
   </div>
 </template>

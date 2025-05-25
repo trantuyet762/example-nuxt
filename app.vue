@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 
-const nuxtApp = useNuxtApp()
+const nuxtApp = useNuxtApp();
 
-nuxtApp.hook('page:finish', () => {
-  window.scrollTo(0, 0)
-})
+nuxtApp.hook("page:finish", () => {
+  window.scrollTo(0, 0);
+});
 
 useHead({
-  link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' }],
-})
+  link: [{ rel: "icon", type: "image/x-icon", href: "/img/favicon.ico" }],
+});
 
 onMounted(() => {
-  const header = document.querySelector('.header')
+  const header = document.querySelector(".header");
   if (header) {
-    const headerElement = header as HTMLElement
-    const headerHeight = headerElement.offsetHeight
-    document.body.style.paddingTop = `${headerHeight}px`
+    const headerElement = header as HTMLElement;
+    const headerHeight = headerElement.offsetHeight;
+    document.body.style.paddingTop = `${headerHeight}px`;
   }
-})
+});
 </script>
 <template>
-  <NuxtLayout>
-    <div class="min-h-screen">
+  <NuxtLayout class="min-h-screen flex flex-col bg-gray-50">
+    <div class="flex-grow">
       <NuxtPage />
     </div>
   </NuxtLayout>

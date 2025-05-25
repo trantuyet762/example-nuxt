@@ -1,0 +1,30 @@
+{
+    "faqs": [
+      {
+        "question": "What is GeeLark?",
+        "answer": "GeeLark is a powerful tool for privacy protection.",
+        "open": false
+      },
+      {
+        "question": "What’s the difference between an antidetect phone and an antidetect browser?",
+        "answer": "An antidetect phone provides system-wide anonymity, whereas an antidetect browser only protects online activities.",
+        "open": false
+      },
+      {
+        "question": "Is GeeLark an Android emulator?",
+        "answer": "No, GeeLark is a standalone software for privacy-focused browsing.",
+        "open": false
+      },
+      {
+        "question": "How to use GeeLark?",
+        "answer": "Install the software and follow the on-screen instructions.",
+        "open": false
+      },
+      {
+        "question": "Is GeeLark safe?",
+        "answer": "Yes, GeeLark uses advanced encryption techniques to protect user data.",
+        "open": false
+      }
+    ]
+  }
+  

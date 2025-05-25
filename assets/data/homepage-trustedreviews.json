@@ -1,0 +1,20 @@
+{
+    "reviews": [
+      {
+        "text": "GeeLark team has managed to deliver a solution that other players in this industry have been trying to build for years without success.",
+        "author": "Donat Voronin",
+        "position": "Founder and ex-CEO at Multilogin"
+      },
+      {
+        "text": "This platform transformed our business by providing a seamless experience and great customer support.",
+        "author": "John Doe",
+        "position": "CTO at TechCorp"
+      },
+      {
+        "text": "Outstanding service and top-notch performance. Highly recommended!",
+        "author": "Jane Smith",
+        "position": "CEO at InnovateX"
+      }
+    ]
+  }
+  
