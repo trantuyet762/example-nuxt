@@ -1,0 +1,50 @@
+{
+    "plans": [
+      {
+        "version": "Android 10",
+        "basics": "Equipped with sound and camera",
+        "performance": "Good, designed to flawlessly run short video apps",
+        "scenarios": "Social media account management, short video app management, and Automation",
+        "upload": true,
+        "timeAddon": true,
+        "charges": "$0.007/minute/phone; daily expenditure cap of $1/phone"
+      },
+      {
+        "version": "Android 11",
+        "basics": "Equipped with sound and camera",
+        "performance": "Good, designed to flawlessly run short video apps",
+        "scenarios": "Social media account management, short video app management, and Automation",
+        "upload": true,
+        "timeAddon": true,
+        "charges": "$0.007/minute/phone; daily expenditure cap of $1/phone"
+      },
+      {
+        "version": "Android 12",
+        "basics": "Features sound and camera",
+        "performance": "Good, ideal for seamlessly running any apps",
+        "scenarios": "All scenarios",
+        "upload": true,
+        "timeAddon": true,
+        "charges": "$0.007/minute/phone; daily expenditure cap of $1/phone"
+      },
+      {
+        "version": "Android 13",
+        "basics": "Features sound and camera",
+        "performance": "Good, ideal for seamlessly running any apps",
+        "scenarios": "All scenarios",
+        "upload": true,
+        "timeAddon": true,
+        "charges": "$0.007/minute/phone; daily expenditure cap of $1/phone"
+      },
+      {
+        "version": "Android 14",
+        "basics": "Features sound and camera",
+        "performance": "Good, ideal for seamlessly running any apps",
+        "scenarios": "All scenarios",
+        "upload": true,
+        "timeAddon": true,
+        "charges": "$29.9/month/phone"
+      }
+    ]
+  }
+  

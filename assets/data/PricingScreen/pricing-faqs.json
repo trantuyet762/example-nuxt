@@ -1,0 +1,35 @@
+{
+    "faqs": [
+      {
+        "question": "What is a cloud phone?",
+        "answer": "GeeLark’s cloud phone profile operates using cloud phone technology. A cloud phone is essentially an Android device hosted in the cloud, providing all the major functionalities of a physical smartphone without the need for actual hardware.",
+        "open": false
+      },
+      {
+        "question": "What are total free minutes?",
+        "answer": "Total free minutes are the time you can use cloud phones for free. They come with your subscription and are refilled every month. The amount depends on your subscription. All profiles and all team members share these minutes. Once they’re used up, you’ll be charged from your account balance for using cloud phones.",
+        "open": false
+      },
+      {
+        "question": "What are one-time free minutes?",
+        "answer": "When you create a new account, GeeLark will give you a gift of 60 free minutes that are valid for 30 days. Use these to try out our cloud phones.",
+        "open": false
+      },
+      {
+        "question": "What is Time add-on?",
+        "answer": "With a time add-on, you can keep using your cloud phone longer. Once you’ve used up your free minutes, we’ll deduct minutes from your add-on. If your add-on runs out, you’ll switch to pay-per-minute.",
+        "open": false
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We currently accept payments via credit cards, PayPal, and USDT. We are continually working to integrate additional payment methods to enhance convenience for our users.",
+        "open": false
+      },
+      {
+        "question": "How to pay for the subscription?",
+        "answer": "Create an account and log in. Go to the “Billing” section and click on “Upgrade subscription.” Select the number of profiles and member seats that match your needs, then click “Monthly subscription” and specify the subscription period. Finally, click “Pay” to complete your purchase.",
+        "open": false
+      }
+    ]
+  }
+  
