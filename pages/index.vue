@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import SecondIntroduceProduction from "~/components/elements/SecondIntroduceProduction.vue";
-import TrustedReviews from "~/components/elements/TrustedReviews.vue";
-import AutomationSection from "~/components/elements/AutomationSection.vue";
-import Permisstions from "~/components/elements/Permisstions.vue";
-import UseCases from "~/components/elements/UseCases.vue";
-import FAQs from "~/components/elements/FAQs.vue";
-import Blogs from "~/components/elements/Blogs.vue";
-import SimpleCTA from "~/components/elements/SimpleCTA.vue";
+import SecondIntroduceProduction from '~/components/elements/SecondIntroduceProduction.vue'
+import TrustedReviews from '~/components/elements/TrustedReviews.vue'
+import AutomationSection from '~/components/elements/AutomationSection.vue'
+import Permisstions from '~/components/elements/Permisstions.vue'
+import UseCases from '~/components/elements/UseCases.vue'
+import FAQs from '~/components/elements/FAQs.vue'
+import Blogs from '~/components/elements/Blogs.vue'
+import SimpleCTA from '~/components/elements/SimpleCTA.vue'
 definePageMeta({
-  layout: "default",
-});
+  layout: 'default',
+})
 </script>
 
 <template>
@@ -28,7 +28,7 @@ definePageMeta({
 
       <!-- Nội dung chính -->
       <div
-        class="container relative z-10 flex flex-col items-center justify-center text-center mt-32 max-w-4xl"
+        class="container relative z-10 flex flex-col items-center justify-center text-center mt-12 max-w-4xl"
       >
         <!-- Logo -->
         <img
