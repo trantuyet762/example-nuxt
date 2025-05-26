@@ -1,0 +1,15 @@
+{
+    "data": {
+        "tabs": [
+            "Windows",
+            "macOS",
+            "Linux"
+        ],
+        "selectedTab": "Windows",
+        "requirements": {
+            "Windows": "Windows 10 or higher",
+            "macOS": "macOS 11 or higher",
+            "Linux": "Ubuntu 20.04 or higher"
+        }
+    }
+}
