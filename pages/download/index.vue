@@ -4,7 +4,7 @@ import DownloadMoreInformation from '~/components/elements/DownloadScreen/MoreIn
 import DownloadFAQ from '~/components/elements/DownloadScreen/FAQ.vue'
 </script>
 <template>
-  <div class="max-w-7xl mx-auto">
+  <div class="max-w-7xl mx-auto mt-12">
     <DownloadIntro />
     <DownloadMoreInformation />
     <DownloadFAQ />
