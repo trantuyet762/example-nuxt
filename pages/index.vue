@@ -28,7 +28,7 @@ definePageMeta({
 
       <!-- Nội dung chính -->
       <div
-        class="container relative z-10 flex flex-col items-center justify-center text-center mt-12 max-w-4xl"
+        class="container relative z-10 flex flex-col items-center justify-center text-center max-w-4xl"
       >
         <!-- Logo -->
         <img
