@@ -6,12 +6,11 @@ import { useRouter } from 'vue-router'
 const showSideDrawer = ref(false)
 const router = useRouter()
 
-// Cấu trúc dữ liệu menuItems đã cập nhật: sử dụng 'children' cho cả hai loại submenu
 const menuItems = ref([
   {
-    name: 'Product', // Đã đổi tên để khớp với hình ảnh
+    name: 'Product',
     link: '/products',
-    // Submenu dạng phẳng dùng children
+
     children: [
       { name: 'Antidetect phone', link: '/products/1' },
       { name: 'Antidetect browser for Android', link: '/products/2' },
@@ -23,11 +22,9 @@ const menuItems = ref([
   },
   {
     name: 'Solutions',
-    link: '#', // Link cho mục menu chính
-    // Submenu dạng đa cột sử dụng children, với cấu trúc biểu diễn cột bên trong
+    link: '#',
     children: [
       {
-        // Đánh dấu đây là dữ liệu cho cột
         isColumnData: true,
         title: 'PLATFORMS',
         links: [
@@ -71,38 +68,45 @@ const menuItems = ref([
   { name: 'Download', link: '/download' },
 ])
 
-// Helper function để kiểm tra xem dữ liệu children có phải dành cho cột không
-const isColumnSubmenu = (children) => {
-  return children && children.length > 0 && children[0].isColumnData
+const isColumnSubmenu = (
+  children: (
+    | { name: string; link: string }
+    | {
+        isColumnData: boolean
+        title: string
+        links: { name: string; link: string }[]
+      }
+  )[]
+) => {
+  return (
+    children &&
+    children.length > 0 &&
+    'isColumnData' in children[0] &&
+    children[0].isColumnData
+  )
 }
 
-// Script để thêm icon dropdown vào các mục menu có submenu
 onMounted(() => {
-  // Chọn các mục menu cấp 1 trong cấu trúc header-menu > ul
   document.querySelectorAll('.header-menu > ul > li').forEach((li) => {
-    // Tìm mục menu tương ứng trong dữ liệu
     const itemData = menuItems.value.find((item) => {
       const linkSpan = li.querySelector(':scope > a, :scope > span')
       return linkSpan && item.name === linkSpan.textContent?.trim()
     })
 
-    // Kiểm tra nếu mục dữ liệu tồn tại và có children
     if (itemData && itemData.children && itemData.children.length > 0) {
-      const linkSpan = li.querySelector(':scope > a, :scope > span') // Lấy thẻ link hoặc span con trực tiếp
+      const linkSpan = li.querySelector(':scope > a, :scope > span')
 
       if (linkSpan) {
-        // Tạo Vue component từ icon (sử dụng inline styles ở đây cho đơn giản, có thể chuyển sang CSS nếu thích)
         const iconVNode = h(AkChevronDown, {
           style: {
-            width: '1rem', // 16px (w-4)
-            height: '1rem', // 16px (h-4)
-            display: 'inline-block', // inline
-            marginLeft: '0.25rem', // 4px (ml-1)
-            color: '#6B7280', // gray-500
+            width: '1rem',
+            height: '1rem',
+            display: 'inline-block',
+            marginLeft: '0.25rem',
+            color: '#6B7280',
           },
         })
 
-        // Mount vào một container và thêm vào thẻ link/span
         const container = document.createElement('span')
         const app = createApp({ render: () => iconVNode })
         app.mount(container)
@@ -114,13 +118,11 @@ onMounted(() => {
   })
 })
 
-// Script để đặt vị trí top động cho submenu dựa trên chiều cao header
 onMounted(() => {
-  const headermenu = document.querySelector('.header-menu') as HTMLElement // Lấy phần tử header
+  const headermenu = document.querySelector('.header-menu') as HTMLElement
   if (headermenu) {
     const headerHeight = headermenu.offsetHeight
 
-    // Chọn tất cả các phần tử ul hoặc div con trực tiếp của các phần tử li trong menu chính hoạt động như submenu
     document
       .querySelectorAll(
         '.header-menu > ul > li > ul.submenu, .header-menu > ul > li > div.submenu'
@@ -131,7 +133,6 @@ onMounted(() => {
   }
 })
 
-// Giữ lại đoạn này nếu được sử dụng cho mobile side drawer đóng khi đổi route
 router.afterEach(() => {
   showSideDrawer.value = false
 })
@@ -160,7 +161,6 @@ router.afterEach(() => {
 
             <!-- Submenu Container -->
             <template v-if="item.children && item.children.length > 0">
-              <!-- Kiểm tra nếu dữ liệu children là cấu trúc cột -->
               <div
                 v-if="isColumnSubmenu(item.children)"
                 class="submenu submenu--multicolumn"
@@ -170,8 +170,8 @@ router.afterEach(() => {
                   :key="colIndex"
                   class="submenu-column"
                 >
-                  <h4 v-if="column.title">{{ column.title }}</h4>
-                  <ul>
+                  <h4 v-if="'title' in column">{{ column.title }}</h4>
+                  <ul v-if="'links' in column">
                     <li
                       v-for="(link, linkIndex) in column.links"
                       :key="linkIndex"
@@ -181,13 +181,13 @@ router.afterEach(() => {
                   </ul>
                 </div>
               </div>
-              <!-- Nếu không, render submenu dạng phẳng -->
+
               <ul v-else>
                 <li
                   v-for="(child, childIndex) in item.children"
                   :key="childIndex"
                 >
-                  <NuxtLink :to="child.link">
+                  <NuxtLink v-if="'link' in child" :to="child.link">
                     {{ child.name }}
                   </NuxtLink>
                 </li>
